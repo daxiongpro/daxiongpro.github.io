@@ -68,9 +68,13 @@
         <div class="block-subtitle">
           {{ exp.duration }} | {{ exp.company }}
         </div>
+        
+        {% for des in exp.description %}
         <div class="block-content">
-          {{ exp.description }}
+          {{ des }}
         </div>
+        {% endfor %}
+        
       </div>
       {% endfor %}
     </div>
@@ -89,9 +93,11 @@
         <div class="block-subtitle">
           {{ project.contribution }}
         </div>
+        {% for des in project.description %}
         <div class="block-content">
-          {{ project.description }}
+          {{ des }}
         </div>
+        {% endfor%}
       </div>
       {% endfor %}
     </div>
